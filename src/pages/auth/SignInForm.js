@@ -15,41 +15,40 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 function SignInForm() {
-    <Form>
-        <Form.Group controlId="username">
-            <Form.Label className="d-none">Username</Form.Label>
-            <Form.Control 
-                type="text" 
-                placeholder="Username"
-                name="username" 
-                className={styles.Input}
-            />
-        </Form.Group>
-
-        <Form.Group controlId="password">
-            <Form.Label className="d-none">Password</Form.Label>
-            <Form.Control 
-                type="password" 
-                placeholder="Password" 
-                name="password"
-                className={styles.Input}
-            />
-        </Form.Group>
-        <Button 
-            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-            type="submit"
-        >
-            Sign In
-        </Button>
-    </Form>
+//   Add your component logic here
 
   return (
     <Row className={styles.Row}>
       <Col className="my-auto p-0 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign in</h1>
-          {/* Add your form here */}
+          <Form>
+                <Form.Group controlId="username">
+                    <Form.Label className="d-none">Username</Form.Label>
+                    <Form.Control 
+                        type="text" 
+                        placeholder="Username"
+                        name="username" 
+                        className={styles.Input}
+                    />
+                </Form.Group>
 
+                <Form.Group controlId="password">
+                    <Form.Label className="d-none">Password</Form.Label>
+                    <Form.Control 
+                        type="password" 
+                        placeholder="Password" 
+                        name="password"
+                        className={styles.Input}
+                    />
+                </Form.Group>
+                <Button 
+                    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+                    type="submit"
+                >
+                    Sign In
+                </Button>
+            </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signup">
