@@ -15,7 +15,33 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 function SignInForm() {
-//   Add your component logic here
+    <Form>
+        <Form.Group controlId="username">
+            <Form.Label className="d-none">Username</Form.Label>
+            <Form.Control 
+                type="text" 
+                placeholder="Username"
+                name="username" 
+                className={styles.Input}
+            />
+        </Form.Group>
+
+        <Form.Group controlId="password">
+            <Form.Label className="d-none">Password</Form.Label>
+            <Form.Control 
+                type="password" 
+                placeholder="Password" 
+                name="password"
+                className={styles.Input}
+            />
+        </Form.Group>
+        <Button 
+            className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+            type="submit"
+        >
+            Sign In
+        </Button>
+    </Form>
 
   return (
     <Row className={styles.Row}>
